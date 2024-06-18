@@ -4,9 +4,9 @@
 <!--[![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)-->
 
 # BuyNow
-<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/master/Screenshot%20(36).png" ></a>-->
-<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/master/Screenshot%20(37).png"></a>-->
-<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/master/Screenshot%20(39).png"></a>-->
+<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/main/Screenshot%20(36).png" ></a>-->
+<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/main/Screenshot%20(37).png"></a>-->
+<a href="https://github.com/huddaraavi100"><img src="https://github.com/huddaraavi100/BuyNow/blob/main/Screenshot%20(39).png"></a>-->
 
 > A Ecommerce Site to buy Products with functionality of cart,Payment and Stock Managment(Primarily Aim of this project to learn Backend Functionality of E-commerce Giants like Amazon,Flipkart,etc. Please Ignore the UX/UI Anomalies of this project .You can Host the site Globally making some changes in debugging and Server settings
 
