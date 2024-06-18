@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!---fontawesome-->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/5b19d39a25.js" crossorigin="anonymous"></script>
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+  <!--navigation bar--->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="/"><i class="fas fa-store text-warning fa-2x"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'Home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Categories</a>
+      </li>-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown04">
+            <a class="dropdown-item" href="{% url 'Home' %}">All Products</a>
+          {%for category in links %}
+          <a class="dropdown-item" href="{{category.get_url}}">{{category.name}}</a>
+          {%endfor%}
+        </div>
+      </li>
+      {% if item_count > 0 %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'cart_detail' %}">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>({{item_count}})
+        </a>
+        {% endif %}
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-md-0" action="{% url 'search' %}" , method="GET">
+        <div class="input-group">
+            <input type="text" name="title" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-warning"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+  </div>
+</nav>
+    {% block content %}
+    {% endblock %}
+  {% include 'navbar.html' %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
